@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e6e7fe5fd9d19060838a2fee2857ca4",
+    "content-hash": "208118c95ab63233f2ac1f9132a5b051",
     "packages": [
         {
             "name": "brick/math",
@@ -2256,6 +2256,51 @@
                 }
             ],
             "time": "2023-02-08T01:06:31+00:00"
+        },
+        {
+            "name": "osmianski/not-implemented",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/osmianski/not-implemented.git",
+                "reference": "16d50144577b9392251ee45710e81ba9437df09d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/osmianski/not-implemented/zipball/16d50144577b9392251ee45710e81ba9437df09d",
+                "reference": "16d50144577b9392251ee45710e81ba9437df09d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Osmianski\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vladislav Osmianskij",
+                    "email": "vlaosm@gmail.com",
+                    "homepage": "https://osmianski.com/"
+                }
+            ],
+            "description": "A simple library that helps to never forget unimplemented parts of the application.",
+            "homepage": "https://github.com/osmianski/not-implemented",
+            "keywords": [
+                "NotImplemented"
+            ],
+            "support": {
+                "issues": "https://github.com/osmianski/not-implemented/issues",
+                "source": "https://github.com/osmianski/not-implemented/tree/v0.1.0"
+            },
+            "time": "2023-03-28T19:33:10+00:00"
         },
         {
             "name": "phpoption/phpoption",
