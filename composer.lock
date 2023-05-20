@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "208118c95ab63233f2ac1f9132a5b051",
+    "content-hash": "898716a9a05bde67fe8bee1cd9536756",
     "packages": [
         {
             "name": "brick/math",
@@ -2256,6 +2256,101 @@
                 }
             ],
             "time": "2023-02-08T01:06:31+00:00"
+        },
+        {
+            "name": "osmianski/laravel-code",
+            "version": "0.1.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "packages/osmianski/laravel-code",
+                "reference": "d2edfb15f10a4bbc66075c9d65220b50e36d2337"
+            },
+            "require": {
+                "illuminate/support": "~10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Osmianski\\Code\\CodeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Osmianski\\Code\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vlad Osmianski",
+                    "email": "vlaosm@gmail.com",
+                    "homepage": "<https://osmianski.com/>"
+                }
+            ],
+            "description": "Reflects over class hierarchies.",
+            "keywords": [
+                "Laravel",
+                "class",
+                "code",
+                "hierarchies"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "osmianski/lazy-properties",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/osmianski/lazy-properties.git",
+                "reference": "2ea246f1d03b7060207e6937e49f5239b19a9ff4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/osmianski/lazy-properties/zipball/2ea246f1d03b7060207e6937e49f5239b19a9ff4",
+                "reference": "2ea246f1d03b7060207e6937e49f5239b19a9ff4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Osmianski\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vladislav Osmianskij",
+                    "email": "vlaosm@gmail.com",
+                    "homepage": "https://osmianski.com/"
+                }
+            ],
+            "description": "A library that adds lazy properties to your objects.",
+            "homepage": "https://github.com/osmianski/lazy-properties",
+            "keywords": [
+                "lazy",
+                "properties"
+            ],
+            "support": {
+                "issues": "https://github.com/osmianski/lazy-properties/issues",
+                "source": "https://github.com/osmianski/lazy-properties/tree/v0.1.1"
+            },
+            "time": "2023-03-28T19:53:19+00:00"
         },
         {
             "name": "osmianski/not-implemented",
@@ -7931,7 +8026,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "osmianski/laravel-code": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

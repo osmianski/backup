@@ -10,6 +10,8 @@
         "laravel/framework": "^10.8",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
+        "osmianski/laravel-code": "@dev",
+        "osmianski/lazy-properties": "^0.1.1",
         "osmianski/not-implemented": "^0.1.0"
     },
     "require-dev": {
@@ -63,5 +65,14 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/osmianski/laravel-code",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
 }

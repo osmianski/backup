@@ -2,39 +2,36 @@
 
 namespace App;
 
+use App\Backup\Operation;
+use Illuminate\Support\Collection;
 use Osmianski\Exceptions\NotImplemented;
+use Symfony\Component\Console\Output\OutputInterface;
 
 class Backup
 {
-    public function run(): void
+    public function run(OutputInterface $output = null): void
     {
-        $this->compressDirectories(
-            config('backup.compress.sources'),
-            config('backup.compress.target'),
-        );
-        $this->backupDatabases(
-            config('backup.database.sources'),
-            config('backup.database.target'),
-        );
-        $this->uploadDirectoriesToTheCloud(
-            config('backup.upload.sources'),
-            config('backup.upload.disk'),
-            config('backup.upload.target')
-        );
+        foreach ($this->getSteps($output) as $step) {
+            $step->run();
+        }
     }
 
-    protected function compressDirectories(array $sources, string $target): void
+    /**
+     * @return Collection<int, Operation>
+     */
+    protected function getSteps(OutputInterface $output = null): Collection
     {
-        throw new NotImplemented();
-    }
+        $parameters = [];
 
-    protected function backupDatabases(array $sources, string $target): void
-    {
-        throw new NotImplemented();
-    }
+        if ($output) {
+            $parameters['output'] = $output;
+        }
 
-    protected function uploadDirectoriesToTheCloud(array $sources, string $disk, string $target): void
-    {
-        throw new NotImplemented();
+        return collect(config('backup'))
+            ->map(fn(array $data) => code()->instanceOf(
+                Operation::class,
+                $data['key'],
+                array_merge($parameters, $data)
+            ));
     }
 }

@@ -19,6 +19,11 @@ It runs on reboot or wake up daily. The sync only happens from specified locatio
 
 All operations are logged.
 
+## Prerequisites
+
+1. Install [PHP, Composer, Docker](https://laravel.com/docs/10.x).
+2. Install [rclone](https://rclone.org/install/), and [configure it to access your Google Drive account](https://rclone.org/drive/#making-your-own-client-id).
+
 ## License
 
 This project is open-sourced software licensed under the MIT license.

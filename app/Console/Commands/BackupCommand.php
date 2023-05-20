@@ -16,6 +16,6 @@ class BackupCommand extends Command
      */
     public function handle(Backup $backup): void
     {
-        $backup->run();
+        $backup->run($this->output);
     }
 }
