@@ -144,7 +144,9 @@ abstract class Operation
     {
         $this->output->writeln("> {$command}");
 
-        Process::forever()->tty()->run($command)->throw();
+        Process::forever()->run($command, function (string $type, string $output) {
+            $this->output->writeln($output);
+        })->throw();
     }
 
     protected function mkdir(string $path): void
